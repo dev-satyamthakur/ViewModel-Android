@@ -20,7 +20,7 @@ class MainActivity : AppCompatActivity() {
         tvMain = findViewById(R.id.tv_main)
 
         // setting up the viewModel
-        mainViewModel = ViewModelProvider(this).get(MainViewModel::class.java)
+        mainViewModel = ViewModelProvider(this, MainViewModelFactory(8)).get(MainViewModel::class.java)
 
         tvMain.text = mainViewModel.count.toString()
 
