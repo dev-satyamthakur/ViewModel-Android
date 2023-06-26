@@ -2,9 +2,9 @@ package com.satyamthakur.learning.viewmodelandroid
 
 import androidx.lifecycle.ViewModel
 
-class MainViewModel: ViewModel() {
+class MainViewModel(val c: Int): ViewModel() {
 
-    var count: Int = 0
+    var count: Int = c
 
     fun increment() {
         count++
